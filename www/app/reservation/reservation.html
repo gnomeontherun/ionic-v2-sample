@@ -1,0 +1,26 @@
+<ion-navbar *navbar primary>
+  <ion-title>Reservation</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <icon key></icon> Room: {{reservation.room}}
+    </ion-item>
+    <ion-item>
+      <icon calendar></icon> Check In: {{reservation.checkin | date:'mediumDate'}}
+    </ion-item>
+    <ion-item>
+      <icon calendar></icon> Check Out: {{reservation.checkout | date:'mediumDate'}}
+    </ion-item>
+    <ion-item>
+      <icon wifi></icon> Wifi Code: {{reservation.wifi}}
+    </ion-item>
+    <ion-item>
+      <icon pricetag></icon> Rate: {{reservation.rate | currency}}/night
+    </ion-item>
+    <ion-item>
+      <icon pricetags></icon> Total: {{reservation.rate * 7 | currency}}
+    </ion-item>
+  </ion-list>
+</ion-content>

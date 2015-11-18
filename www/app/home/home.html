@@ -1,0 +1,17 @@
+<ion-navbar *navbar primary hide-back-button>
+  <ion-title>Aloha Resort</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="goToReservation()">
+      <icon document></icon> See your reservation
+    </ion-item>
+    <ion-item (click)="goToWeather()">
+      <icon sunny></icon> Current weather
+    </ion-item>
+    <ion-item (click)="goToRestaurants()">
+      <icon restaurant></icon> Nearby restaurants
+    </ion-item>
+  </ion-list>
+</ion-content>

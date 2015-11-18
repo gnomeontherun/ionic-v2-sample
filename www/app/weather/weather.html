@@ -1,0 +1,14 @@
+<ion-navbar *navbar primary>
+  <ion-title>Current Weather</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-list *ng-if="weather">
+    <ion-item>Current Conditions: {{weather.weather[0].main}}</ion-item>
+    <ion-item>Current Temperature: {{weather.main.temp}}&deg;</ion-item>
+    <ion-item>Humidity: {{weather.main.humidity}}%</ion-item>
+    <ion-item>Today's High: {{weather.main.temp_max}}&deg;</ion-item>
+    <ion-item>Today's Low: {{weather.main.temp_min}}&deg;</ion-item>
+    <ion-item>Wind: {{weather.wind.speed}}mph, {{getDirection(weather.wind.deg)}}</ion-item>
+  </ion-list>
+</ion-content>

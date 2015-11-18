@@ -1,0 +1,14 @@
+<ion-navbar *navbar primary>
+  <ion-title>Local Restaurants</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-card *ng-for="#restaurant of results.restaurants">
+    <ion-card-header>
+      <h2>{{restaurant.name}}</h2>
+      <p>{{restaurant.address}}, {{restaurant.city}}</p>
+    </ion-card-header>
+    <img [src]="restaurant.image_url" />
+  </ion-card>
+  <button block (click)="getRestaurants()" *ng-if="results.restaurants.length">Load More</button>
+</ion-content>

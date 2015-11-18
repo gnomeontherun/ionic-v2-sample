@@ -1,0 +1,25 @@
+<ion-navbar *navbar primary>
+  <ion-title>Welcome to Aloha Resort</ion-title>
+  <button>Button</button>
+    <ion-nav-items secondary>
+      <button><a class="button button-clear" (click)="goHome()" nav-clear>Start</a></button>
+    </ion-nav-items>
+</ion-navbar>
+
+<ion-content padding id="tour">
+  <ion-slides>
+    <ion-slide>
+      <icon document></icon>
+      <h3>See your reservation</h3>
+    </ion-slide>
+    <ion-slide>
+      <icon restaurant></icon>
+      <h3>Find local restaurants</h3>
+    </ion-slide>
+    <ion-slide>
+      <icon sunny></icon>
+      <h3>Get the weather</h3>
+    </ion-slide>
+    <ion-pager></ion-pager>
+  </ion-slides>
+</ion-content>
